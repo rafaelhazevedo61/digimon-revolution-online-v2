@@ -1,0 +1,342 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #e9f5ff;
+  background: #0b1420;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 20px 8px;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+  color: inherit;
+  border: 0;
+  border-radius: 12px;
+  min-height: 44px;
+  background: #26384b;
+  padding: 10px;
+}
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+button:focus-visible {
+  outline: 3px solid #a0f3df;
+  outline-offset: 3px;
+}
+.phone {
+  max-width: 420px;
+  margin: auto;
+  background: #101b2a;
+  border: 1px solid #344459;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px #0004;
+}
+header {
+  padding: 22px 20px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header small {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #7facc6;
+}
+h1 {
+  font-size: 20px;
+  margin: 6px 0 0;
+}
+h2 {
+  font-size: 22px;
+  margin: 0;
+}
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: #264055;
+  border-radius: 14px;
+  color: #83e9d0;
+  font-size: 13px;
+}
+.resources {
+  display: flex;
+  gap: 8px;
+  padding: 0 20px 16px;
+}
+.resources span {
+  flex: 1;
+  padding: 10px;
+  background: #1b2b3c;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.resources span:first-child {
+  color: #f4cd79;
+}
+.scene {
+  position: relative;
+  background: #143b41;
+}
+.battle-canvas {
+  width: 100%;
+  aspect-ratio: 780/620;
+}
+.battle-canvas canvas {
+  display: block;
+  max-width: 100%;
+}
+.zone {
+  position: absolute;
+  top: 16px;
+  left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 11px;
+  color: #d5f9ee;
+  max-width: 55%;
+}
+.zone strong {
+  font-size: 19px;
+}
+.auto {
+  position: absolute;
+  right: 14px;
+  top: 20px;
+  font-size: 10px;
+  padding: 6px 8px;
+  border-radius: 20px;
+  background: #102d2be6;
+  color: #a4f5ca;
+}
+.enemy {
+  position: absolute;
+  top: 75px;
+  right: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 145px;
+  font-size: 11px;
+  text-align: right;
+}
+.enemy .meter div {
+  background: #f49887;
+}
+.wave {
+  position: absolute;
+  bottom: 12px;
+  left: 18px;
+  right: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #d4e6da;
+  font-size: 10px;
+}
+.journey {
+  padding: 12px 18px;
+  background: #192b3b;
+  color: #edca88;
+  font-size: 12px;
+}
+.content {
+  padding: 18px;
+}
+.partner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.partner small {
+  display: block;
+  color: #8ea9bd;
+  font-size: 11px;
+  margin-top: 5px;
+}
+.level {
+  background: #26384b;
+  padding: 9px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+.meter-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #a5bdce;
+  margin-top: 14px;
+  margin-bottom: 7px;
+}
+.meter {
+  height: 5px;
+  background: #ffffff1c;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.meter > div {
+  height: 100%;
+  background: #75d8b2;
+  transition: width 0.15s;
+}
+.actions {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 8px;
+  margin-top: 17px;
+}
+.actions button {
+  min-height: 74px;
+  font-size: 11px;
+  padding: 8px 4px;
+}
+.actions b {
+  display: block;
+  font-size: 23px;
+  margin-bottom: 6px;
+}
+.main-action {
+  background: #efab55;
+  color: #2d241b;
+}
+.combat-state {
+  font-size: 11px;
+  text-align: center;
+  color: #f4cd79;
+  min-height: 30px;
+  margin-top: 12px;
+}
+.controls {
+  display: flex;
+  gap: 8px;
+}
+.controls button {
+  flex: 1;
+  font-size: 12px;
+}
+.primary {
+  background: #83e4cd;
+  color: #102e2c;
+}
+.message {
+  font-size: 12px;
+  text-align: center;
+  min-height: 32px;
+  color: #b5d1d9;
+  line-height: 1.5;
+}
+.evolution,
+.upgrades {
+  margin-top: 14px;
+  background: #192e39;
+  border-radius: 14px;
+  padding: 13px;
+  font-size: 12px;
+}
+.evolution p {
+  font-size: 11px;
+  color: #b9d9d5;
+  line-height: 1.5;
+}
+.evolution button {
+  width: 100%;
+  margin-top: 6px;
+  font-size: 12px;
+}
+.section-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.section-label span {
+  color: #9ed7c8;
+}
+.upgrade-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 10px 0;
+}
+.upgrade-buttons button {
+  font-size: 11px;
+  background: #2a4554;
+  overflow-wrap: anywhere;
+}
+.upgrades small {
+  font-size: 10px;
+  color: #a0b7c7;
+}
+footer {
+  font-size: 11px;
+  color: #a8c8bd;
+  line-height: 1.6;
+  margin-top: 18px;
+}
+footer p {
+  margin: 4px 0;
+}
+footer small {
+  display: block;
+  color: #7f9bad;
+  margin-top: 12px;
+  font-size: 10px;
+}
+.offline {
+  margin: 0 18px 14px;
+  padding: 14px;
+  background: #1a3b3a;
+  border-radius: 14px;
+  font-size: 12px;
+}
+.offline p {
+  font-size: 11px;
+  color: #b7d8d0;
+}
+.offline button {
+  width: 100%;
+  margin-top: 8px;
+  background: #83e4cd;
+  color: #102e2c;
+}
+.offline b {
+  color: #a1f1d5;
+}
+.loading {
+  text-align: center;
+  padding: 60px 16px;
+  color: #b9d9d5;
+}
+@media (max-width: 350px) {
+  body {
+    padding: 0;
+  }
+  .phone {
+    border-radius: 0;
+    border: 0;
+  }
+  .content {
+    padding: 15px;
+  }
+  .resources {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  h1 {
+    font-size: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .meter > div {
+    transition: none;
+  }
+}
