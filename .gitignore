@@ -1,0 +1,12 @@
+**/node_modules/
+**/dist/
+**/target/
+**/coverage/
+**/.mvn/wrapper/maven-wrapper.jar
+.idea/
+.vscode/
+*.log
+.env
+.DS_Store
+frontend/test-results/
+frontend/playwright-report/
